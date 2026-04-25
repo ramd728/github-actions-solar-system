@@ -55,6 +55,9 @@ jobs:
   
   docker:
      runs-on: ubuntu-latest
+     permissions:
+      contents: read
+      packages: write   # <-- this is the critical line
      needs:
      - code-coverage
      - unit-testing
